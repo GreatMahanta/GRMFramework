@@ -1,6 +1,7 @@
 package project.helper;
 
 import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
@@ -17,7 +18,7 @@ public class SQLiteDatabaseHelper extends SQLiteOpenHelper {
   }
 
   @Override
-  public void onCreate(android.database.sqlite.SQLiteDatabase database) {
+  public void onCreate(SQLiteDatabase database) {
     try {
       database.execSQL("CREATE TABLE 'pouya' ('firstName' INTEGER, 'lastName' TEXT ,'id' INTEGER)");
     } catch (Exception e) {

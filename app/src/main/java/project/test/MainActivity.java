@@ -1,8 +1,10 @@
 package project.test;
 
 import android.Manifest;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.ListView;
 
 import com.greatmahanta.grmframework.R;
@@ -12,7 +14,8 @@ import java.util.HashMap;
 import java.util.Set;
 
 import project.activity.GRMAppCompatActivity;
-import project.adapter.ListViewAdapter;
+import project.viewholder.ColorViewHolder;
+import project.adapter.ListViewAAdapter;
 import project.struct.ColorStruct;
 import project.struct.SampleColorData;
 
@@ -49,20 +52,36 @@ public class MainActivity extends GRMAppCompatActivity {
 
     ArrayList<ColorStruct> colors = new ArrayList<>();
 
-
     for (String key : keyset) {
       String value = structColors.get(key);
       Log.i(TAG, "ColorStruct: " + key + " #" + value);
       colors.add(new ColorStruct(key, value));
     }
 
-
     ListView lst_view = findViewById(R.id.lst_view);
 
-    ListViewAdapter adapter = new ListViewAdapter(this, colors);
+    ListViewAAdapter<ColorStruct> adapter = new ListViewAAdapter<ColorStruct>(this, colors) {
+
+      @Override
+      public ColorViewHolder assign(View convertView) {
+        ColorViewHolder viewHolder = new ColorViewHolder();
+        viewHolder.txt_color = convertView.findViewById(R.id.txt_color);
+        viewHolder.txt_value = convertView.findViewById(R.id.txt_value);
+        viewHolder.lay_horiz = convertView.findViewById(R.id.lay_horiz);
+        return viewHolder;
+      }
+
+      @Override
+      public void fill(ColorViewHolder viewHolder, ColorStruct item) {
+
+        viewHolder.txt_color.setText(item.color);
+        viewHolder.txt_value.setText(item.value);
+        viewHolder.lay_horiz.setBackgroundColor(Color.parseColor("#" + item.value));
+
+      }
+    };
 
     lst_view.setAdapter(adapter);
-
 
   }
 }

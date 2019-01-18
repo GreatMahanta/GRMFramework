@@ -13,11 +13,11 @@
     android:layout_width="0dp"
     android:layout_height="wrap_content"
     android:layout_margin="4dp"
-    android:layout_weight="1"
+    android:layout_weight="2"
     android:padding="8dp"
     android:text="Color"
     android:textColor="#000"
-    android:textSize="24sp"/>
+    android:textSize="20sp"/>
 
   <TextView
     android:id="@+id/txt_value"
@@ -29,6 +29,6 @@
     android:padding="8dp"
     android:text="Value"
     android:textColor="#000"
-    android:textSize="24sp"/>
+    android:textSize="20sp"/>
 
 </LinearLayout>

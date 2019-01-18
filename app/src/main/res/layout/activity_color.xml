@@ -7,16 +7,8 @@
   android:layout_height="match_parent"
   tools:context="project.activity.GRMAppCompatActivity">
 
-  <Button
-    android:id="@+id/btn_listview"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginStart="60dp"
-    android:layout_marginLeft="60dp"
-    android:layout_marginTop="60dp"
-    android:background="#6686AC"
-    android:padding="8dp"
-    android:text="ListView Test"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"/>
+  <ListView
+    android:id="@+id/lst_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"/>
 </android.support.constraint.ConstraintLayout>

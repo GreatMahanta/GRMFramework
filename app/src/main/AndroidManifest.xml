@@ -9,9 +9,7 @@
   <uses-permission android:name="android.permission.READ_SMS"/>
   <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
 
-
   <application
-
     android:name="project.core.GRMBase"
     android:allowBackup="true"
     android:icon="@mipmap/ic_launcher"
@@ -19,19 +17,20 @@
     android:roundIcon="@mipmap/ic_launcher_round"
     android:supportsRtl="true"
     android:theme="@style/AppTheme">
+    <activity android:name="project.color_listview_test.ColorActivity">
+    </activity>
 
     <uses-library
       android:name="org.apache.http.legacy"
       android:required="false"/>
 
-    <activity android:name="project.test.MainActivity">
+    <activity android:name="project.experience.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN"/>
 
         <category android:name="android.intent.category.LAUNCHER"/>
       </intent-filter>
     </activity>
-
   </application>
 
 </manifest>

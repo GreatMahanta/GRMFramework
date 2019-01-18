@@ -1,4 +1,4 @@
-package project.helper;
+package helper;
 
 import android.util.Log;
 
@@ -12,7 +12,7 @@ import java.util.Locale;
 
 import project.core.GRMBase;
 
-public class FileDownloader {
+public class MyFileDownloader {
 
   private String urlPath;
   private String fileName;
@@ -28,22 +28,22 @@ public class FileDownloader {
     void onFileDownload(String type, String totalSize, String currentSize, int percent);
   }
 
-  public FileDownloader url(String value) {
+  public MyFileDownloader url(String value) {
     urlPath = value;
     return this;
   }
 
-  public FileDownloader fileName(String value) {
+  public MyFileDownloader fileName(String value) {
     fileName = value;
     return this;
   }
 
-  public FileDownloader fileDir(String value) {
+  public MyFileDownloader fileDir(String value) {
     fileDir = value;
     return this;
   }
 
-  public FileDownloader listener(OnFileDownloadListener value) {
+  public MyFileDownloader listener(OnFileDownloadListener value) {
     listener = value;
     return this;
   }

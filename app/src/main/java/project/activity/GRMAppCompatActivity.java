@@ -110,7 +110,7 @@ public class GRMAppCompatActivity extends AppCompatActivity {
 
     if (databaseHelper != null) {
       sqliteDatabase = databaseHelper.getWritableDatabase();
-      Toast.makeText(activity, "Database Created Successfully", Toast.LENGTH_SHORT).show();
+      Toast.makeText(activity, "Database Created Or Opened Successfully", Toast.LENGTH_SHORT).show();
     }
 
     return sqliteDatabase;

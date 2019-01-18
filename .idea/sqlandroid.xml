@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SQLAndroidSettings">
+    <option name="packageNameByDirectory">
+      <map>
+        <entry key="C:\DEV\PROJECT\ANDROID\GRMFramework\AndroidSqlEditorDatabases\" value="com.greatmahanta.grmframework" />
+      </map>
+    </option>
+  </component>
+</project>

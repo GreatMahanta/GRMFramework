@@ -32,7 +32,6 @@ public class SampleColorData {
     data.put("Dark Cyan", "008B8B");
     data.put("Dark Golden Rod", "B8860B");
     data.put("Dark Gray", "A9A9A9");
-    data.put("Dark Grey", "A9A9A9");
     data.put("Dark Green", "006400");
     data.put("Dark Khaki", "BDB76B");
     data.put("Dark Magenta", "8B008B");
@@ -44,13 +43,11 @@ public class SampleColorData {
     data.put("Dark Sea Green", "8FBC8F");
     data.put("Dark Slate Blue", "483D8B");
     data.put("Dark Slate Gray", "2F4F4F");
-    data.put("Dark Slate Grey", "2F4F4F");
     data.put("Dark Turquoise", "00CED1");
     data.put("Dark Violet", "9400D3");
     data.put("Deep Pink", "FF1493");
     data.put("Deep Sky Blue", "00BFFF");
     data.put("Dim Gray", "696969");
-    data.put("Dim Grey", "696969");
     data.put("Dodger Blue", "1E90FF");
     data.put("Fire Brick", "B22222");
     data.put("Floral White", "FFFAF0");
@@ -61,7 +58,6 @@ public class SampleColorData {
     data.put("Gold", "FFD700");
     data.put("Golden Rod", "DAA520");
     data.put("Gray", "808080");
-    data.put("Grey", "808080");
     data.put("Green", "008000");
     data.put("Green Yellow", "ADFF2F");
     data.put("Honey Dew", "F0FFF0");
@@ -79,14 +75,12 @@ public class SampleColorData {
     data.put("Light Cyan", "E0FFFF");
     data.put("Light Golden Rod Yellow", "FAFAD2");
     data.put("Light Gray", "D3D3D3");
-    data.put("Light Grey", "D3D3D3");
     data.put("Light Green", "90EE90");
     data.put("Light Pink", "FFB6C1");
     data.put("Light Salmon", "FFA07A");
     data.put("Light Sea Green", "20B2AA");
     data.put("Light Sky Blue", "87CEFA");
     data.put("Light Slate Gray", "778899");
-    data.put("Light Slate Grey", "778899");
     data.put("Light Steel Blue", "B0C4DE");
     data.put("Light Yellow", "FFFFE0");
     data.put("Lime", "00FF00");
@@ -140,7 +134,6 @@ public class SampleColorData {
     data.put("Sky Blue", "87CEEB");
     data.put("Slate Blue", "6A5ACD");
     data.put("Slate Gray", "708090");
-    data.put("Slate Grey", "708090");
     data.put("Snow", "FFFAFA");
     data.put("Spring Green", "00FF7F");
     data.put("Steel Blue", "4682B4");

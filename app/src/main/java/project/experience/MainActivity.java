@@ -8,6 +8,7 @@ import android.widget.Button;
 
 import com.greatmahanta.grmframework.R;
 
+import project.activity.DownloadActivity;
 import project.activity.GRMAppCompatActivity;
 import project.color_listview_test.ColorActivity;
 
@@ -36,6 +37,14 @@ public class MainActivity extends GRMAppCompatActivity {
       }
     });
 
+    Button btn_connect = findViewById(R.id.btn_connect);
+    btn_connect.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+
+        startActivity(new Intent(MainActivity.this, DownloadActivity.class));
+      }
+    });
 
 //    requestDangerousPermissions(this, Manifest.permission.WRITE_EXTERNAL_STORAGE, new Listeners.OnPermissionGrantListener() {
 //      @Override
@@ -45,6 +54,9 @@ public class MainActivity extends GRMAppCompatActivity {
 ////        database.execSQL("CREATE TABALE 'pouya'( 'firstName INTEGER, 'lastName' TEXT')");
 //      }
 //    });
+
+
+
 
 
   }

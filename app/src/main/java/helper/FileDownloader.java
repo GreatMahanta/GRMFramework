@@ -136,7 +136,7 @@ public class FileDownloader {
   }
 
 
-//  public static void download(final String urlPath, final String fileName, final int bufferSize) {
+//  public static void downloadHttpClient(final String urlPath, final String fileName, final int bufferSize) {
 //
 //    Thread thread = new Thread(new Runnable() {
 //      @Override

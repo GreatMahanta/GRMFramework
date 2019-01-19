@@ -9,6 +9,11 @@ import android.os.Handler;
 import android.preference.PreferenceManager;
 import android.view.LayoutInflater;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+
 public class GRMBase extends Application {
 
   private static final String TAG = "Pouya";
@@ -17,7 +22,7 @@ public class GRMBase extends Application {
   private Context applicationContext;
   private Activity activity;
   private LayoutInflater layoutInflater;
-  private Handler handler;
+  private static Handler handler;
   private SharedPreferences preferences;
   private SharedPreferences.Editor editor;
 
@@ -52,7 +57,7 @@ public class GRMBase extends Application {
     return layoutInflater;
   }
 
-  public Handler getHandler() {
+  public static Handler getHandler() {
     return handler;
   }
 
@@ -64,4 +69,20 @@ public class GRMBase extends Application {
     return editor;
   }
 
+  public static String convertStreamToString(InputStream stream) {
+
+    try {
+      BufferedReader reader = new BufferedReader(new InputStreamReader(stream));
+      StringBuilder builder = new StringBuilder();
+      String line;
+      while ((line = reader.readLine()) != null) {
+        builder.append(line);
+      }
+      return builder.toString();
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+
+    return "Error!!!";
+  }
 }

@@ -6,5 +6,9 @@ public class Listeners {
     void onGrant();
   }
 
+  public interface OnHttpDownloadListener {
+    void onHttpDownload(String data);
+  }
+
 
 }

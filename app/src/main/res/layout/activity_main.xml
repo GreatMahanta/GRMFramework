@@ -11,12 +11,25 @@
     android:id="@+id/btn_listview"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_marginStart="60dp"
-    android:layout_marginLeft="60dp"
+    android:layout_marginStart="44dp"
+    android:layout_marginLeft="44dp"
     android:layout_marginTop="60dp"
     android:background="#6686AC"
     android:padding="8dp"
     android:text="ListView Test"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"/>
+
+  <Button
+    android:id="@+id/btn_connect"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="188dp"
+    android:layout_marginLeft="188dp"
+    android:layout_marginTop="60dp"
+    android:background="#6686AC"
+    android:padding="8dp"
+    android:text="Http String Connect"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent"/>
 </android.support.constraint.ConstraintLayout>

@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 import com.greatmahanta.grmframework.R;
 
-import project.helper.HttpDownloader;
+import project.helper.StringDownloader;
 import project.listener.Listeners;
 
 public class DownloadActivity extends AppCompatActivity {
@@ -37,7 +37,9 @@ public class DownloadActivity extends AppCompatActivity {
         method = edt_method.getText().toString();
         txt_resault.setText("");
 
-        HttpDownloader.download(edt_url.getText().toString(), new Listeners.OnHttpDownloadListener() {
+        StringDownloader downloader = new StringDownloader();
+        downloader.url(edt_url.getText().toString())
+          .listener(new Listeners.OnHttpDownloadListener() {
 
           @Override
           public void onHttpDownload(final String data) {
@@ -52,7 +54,8 @@ public class DownloadActivity extends AppCompatActivity {
             Log.i(TAG, "onHttpDownload: " + data);
 
           }
-        });
+        })
+          .download();
       }
     });
   }

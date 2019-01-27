@@ -17,14 +17,12 @@
     android:roundIcon="@mipmap/ic_launcher_round"
     android:supportsRtl="true"
     android:theme="@style/AppTheme">
-    <activity android:name="project.activity.DownloadActivity">
-    </activity>
-    <activity android:name="project.color_listview_test.ColorActivity">
-    </activity>
+    <activity android:name="project.activity.DownloadActivity"/>
+    <activity android:name="project.color_listview_test.ColorActivity"/>
 
     <uses-library
       android:name="org.apache.http.legacy"
-      android:required="false"/>
+      android:required="true"/>
 
     <activity android:name="project.experience.MainActivity">
       <intent-filter>

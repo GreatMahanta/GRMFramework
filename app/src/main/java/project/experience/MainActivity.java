@@ -48,6 +48,15 @@ public class MainActivity extends GRMAppCompatActivity {
       }
     });
 
+    Button btn_pager = findViewById(R.id.btn_pager);
+    btn_pager.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+
+        startActivity(new Intent(MainActivity.this, PagerActivity.class));
+      }
+    });
+
 //    requestDangerousPermissions(this, Manifest.permission.WRITE_EXTERNAL_STORAGE, new Listeners.OnPermissionGrantListener() {
 //      @Override
 //      public void onGrant() {

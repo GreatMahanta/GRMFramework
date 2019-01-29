@@ -21,6 +21,18 @@
     app:layout_constraintTop_toTopOf="parent"/>
 
   <Button
+    android:id="@+id/btn_pager"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="44dp"
+    android:layout_marginTop="124dp"
+    android:background="#6686AC"
+    android:padding="8dp"
+    android:text="Pager"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"/>
+
+  <Button
     android:id="@+id/btn_connect"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"

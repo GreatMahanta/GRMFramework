@@ -17,6 +17,8 @@
     android:roundIcon="@mipmap/ic_launcher_round"
     android:supportsRtl="true"
     android:theme="@style/AppTheme">
+    <activity android:name="project.experience.PagerActivity">
+    </activity>
     <activity android:name="project.activity.DownloadActivity"/>
     <activity android:name="project.color_listview_test.ColorActivity"/>
 

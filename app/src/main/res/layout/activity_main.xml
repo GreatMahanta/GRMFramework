@@ -7,41 +7,81 @@
   android:layout_height="match_parent"
   tools:context="project.activity.GRMAppCompatActivity">
 
-  <Button
-    android:id="@+id/btn_listview"
+  <android.support.constraint.Guideline
+    android:id="@+id/guideline"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_marginStart="44dp"
-    android:layout_marginLeft="44dp"
-    android:layout_marginTop="60dp"
-    android:background="#6686AC"
-    android:padding="8dp"
-    android:text="ListView Test"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"/>
+    android:layout_margin="4dp"
+    android:orientation="vertical"
+    app:layout_constraintGuide_percent="0.5"/>
 
-  <Button
-    android:id="@+id/btn_pager"
+  <android.support.constraint.Guideline
+    android:id="@+id/guideline2"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_marginStart="44dp"
-    android:layout_marginTop="124dp"
-    android:background="#6686AC"
-    android:padding="8dp"
-    android:text="Pager"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"/>
+    android:orientation="horizontal"
+    app:layout_constraintGuide_percent="0.6"/>
 
-  <Button
-    android:id="@+id/btn_connect"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginStart="188dp"
-    android:layout_marginLeft="188dp"
-    android:layout_marginTop="60dp"
-    android:background="#6686AC"
-    android:padding="8dp"
-    android:text="Http String Connect"
+  <ScrollView
+    android:layout_width="342dp"
+    android:layout_height="674dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginBottom="8dp"
+    android:background="#3C5D77"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"/>
+    app:layout_constraintTop_toTopOf="parent">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="8dp"
+      android:gravity="center_horizontal"
+      android:orientation="vertical">
+
+      <TextView
+        android:id="@+id/txt_color_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:background="#D8B91A"
+        android:gravity="center"
+        android:text="Color ListView"
+        android:textColor="#000"/>
+
+      <TextView
+        android:id="@+id/txt_http_string_download"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:background="#D8B91A"
+        android:gravity="center"
+        android:text="Http String Download"
+        android:textColor="#000"/>
+
+      <TextView
+        android:id="@+id/txt_fragment_tab_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:background="#D8B91A"
+        android:gravity="center"
+        android:text="Tab and Pager With Loaded Fragments"
+        android:textColor="#000"/>
+
+      <TextView
+        android:id="@+id/txt_fragment_tab_pager2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:background="#D8B91A"
+        android:gravity="center"
+        android:text="Tab and Pager With Loaded Fragments"
+        android:textColor="#000"/>
+    </LinearLayout>
+  </ScrollView>
+
 </android.support.constraint.ConstraintLayout>

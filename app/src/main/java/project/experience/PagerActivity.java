@@ -41,6 +41,8 @@ public class PagerActivity extends AppCompatActivity {
     lay_tab.getTabAt(2).setText("Messages");
     lay_tab.getTabAt(2).setIcon(R.drawable.ic_message_black_24dp);
 
-
   }
+
+
+
 }

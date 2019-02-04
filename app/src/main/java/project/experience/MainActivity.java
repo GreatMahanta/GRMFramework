@@ -8,9 +8,9 @@ import android.widget.TextView;
 
 import com.greatmahanta.grmframework.R;
 
+import project.activity.ColorActivity;
 import project.activity.DownloadActivity;
 import project.activity.GRMAppCompatActivity;
-import project.color_listview_test.ColorActivity;
 
 public class MainActivity extends GRMAppCompatActivity {
 
@@ -58,6 +58,16 @@ public class MainActivity extends GRMAppCompatActivity {
       }
     });
 
+    TextView txt_SQLite = findViewById(R.id.txt_sqlite);
+    txt_SQLite.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+
+        startActivity(new Intent(MainActivity.this, SQLActivity.class));
+      }
+    });
+
+
 
 
 
@@ -94,6 +104,7 @@ public class MainActivity extends GRMAppCompatActivity {
 //      .connectionTimeOut(100)
 //      .socketTimeOut(170)
 //      .download();
+
 
 
 

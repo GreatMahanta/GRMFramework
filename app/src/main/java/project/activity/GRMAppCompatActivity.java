@@ -16,7 +16,7 @@ import com.greatmahanta.grmframework.R;
 import java.io.File;
 
 import project.core.GRMBase;
-import project.helper.SQLiteDatabaseHelper;
+import project.helper.MySQLiteDatabaseHelper;
 import project.listener.Listeners;
 
 @SuppressLint("Registered")
@@ -28,10 +28,7 @@ public class GRMAppCompatActivity extends AppCompatActivity {
   private String permission;
   private Listeners.OnPermissionGrantListener onPermissionGrantListener;
   private int requestCode = 100;
-
-  private String appDirectoryName;
-  private String databaseDirectoryName;
-  private String databaseName;
+  //  private String appDirectoryName;
   private SQLiteDatabase sqliteDatabase;
 
   protected void requestDangerousPermissions(final Activity activity, final String permission, Listeners.OnPermissionGrantListener onPermissionGrantListener) {
@@ -79,14 +76,8 @@ public class GRMAppCompatActivity extends AppCompatActivity {
 
   protected void createAppDirectory(String appDirectoryName) {
 
-    this.appDirectoryName = appDirectoryName;
+    File appFile = new File(GRMBase.SDCARD + "/" + appDirectoryName + "/");
 
-    File appFile;
-    if (appDirectoryName != null) {
-      appFile = new File(GRMBase.SDCARD + "/" + appDirectoryName + "/");
-    } else {
-      appFile = new File(GRMBase.SDCARD + "/GRM-programs-directoy/");
-    }
     if (!appFile.exists()) {
       boolean created = appFile.mkdirs();
 
@@ -101,19 +92,25 @@ public class GRMAppCompatActivity extends AppCompatActivity {
   }
 
 
-  protected SQLiteDatabase getSqliteDatabase(String databaseDirectoryName, String databaseName) {
+  protected SQLiteDatabase getSqliteDatabase(String appDirectoryName, String databaseDirectoryName, String databaseName) {
 
-    this.databaseDirectoryName = databaseDirectoryName;
-    this.databaseName = databaseName;
+    if (sqliteDatabase != null) {
+      return sqliteDatabase;
+    }
 
-    SQLiteDatabaseHelper databaseHelper = new SQLiteDatabaseHelper(this, appDirectoryName, databaseDirectoryName, databaseName);
+    if (!new File(GRMBase.SDCARD + "/" + appDirectoryName).exists()) {
+      new File(GRMBase.SDCARD + "/" + appDirectoryName).mkdirs();
+    }
+
+    MySQLiteDatabaseHelper databaseHelper = new MySQLiteDatabaseHelper(this, appDirectoryName, databaseDirectoryName, databaseName);
 
     if (databaseHelper != null) {
       sqliteDatabase = databaseHelper.getWritableDatabase();
       Toast.makeText(activity, "Database Created Or Opened Successfully", Toast.LENGTH_SHORT).show();
+      return sqliteDatabase;
     }
-
-    return sqliteDatabase;
+    return null;
   }
+
 
 }

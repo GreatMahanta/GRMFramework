@@ -1,4 +1,4 @@
-package project.color_listview_test;
+package project.struct;
 
 public class ColorStruct {
 

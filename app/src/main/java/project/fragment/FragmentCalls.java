@@ -1,4 +1,4 @@
-package project.experience;
+package project.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -10,11 +10,11 @@ import android.view.ViewGroup;
 
 import com.greatmahanta.grmframework.R;
 
-public class FragmentMessages extends Fragment {
+public class FragmentCalls extends Fragment {
 
   @Nullable
   @Override
   public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-    return inflater.inflate(R.layout.fragment_messages, container, false);
+    return inflater.inflate(R.layout.fragment_calls, container, false);
   }
 }

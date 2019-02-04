@@ -17,15 +17,14 @@
     android:roundIcon="@mipmap/ic_launcher_round"
     android:supportsRtl="true"
     android:theme="@style/AppTheme">
+    <activity android:name="project.experience.SQLActivity">
+    </activity>
     <activity android:name="project.experience.PagerActivity">
     </activity>
     <activity android:name="project.activity.DownloadActivity"/>
-    <activity android:name="project.color_listview_test.ColorActivity"/>
-
-    <uses-library
-      android:name="org.apache.http.legacy"
-      android:required="true"/>
-
+    <activity android:name="project.activity.ColorActivity"/> <!-- <uses-library -->
+    <!-- android:name="org.apache.http.legacy" -->
+    <!-- android:required="true"/> -->
     <activity android:name="project.experience.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN"/>

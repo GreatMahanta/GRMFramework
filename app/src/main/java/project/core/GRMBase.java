@@ -2,7 +2,6 @@ package project.core;
 
 import android.app.Activity;
 import android.app.Application;
-import android.app.DownloadManager;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Environment;
@@ -44,7 +43,6 @@ public class GRMBase extends Application {
     handler = new Handler();
     preferences = PreferenceManager.getDefaultSharedPreferences(applicationContext);
     editor = preferences.edit();
-
   }
 
   public Context getContext() {
@@ -88,7 +86,5 @@ public class GRMBase extends Application {
     return "Error!!!";
   }
 
-  public DownloadManager getDownloadManager() {
-    return (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
-  }
+
 }

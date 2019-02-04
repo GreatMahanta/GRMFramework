@@ -1,4 +1,4 @@
-package project.color_listview_test;
+package project.activity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -10,6 +10,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Set;
 
+import project.adapter.ColorListViewAdapter;
+import project.struct.ColorStruct;
 import project.struct.SampleColorData;
 
 public class ColorActivity extends AppCompatActivity {

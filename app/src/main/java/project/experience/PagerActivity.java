@@ -9,6 +9,9 @@ import android.support.v7.app.AppCompatActivity;
 import com.greatmahanta.grmframework.R;
 
 import project.adapter.MyPagerAdapter;
+import project.fragment.FragmentCalls;
+import project.fragment.FragmentContacts;
+import project.fragment.FragmentMessages;
 
 public class PagerActivity extends AppCompatActivity {
 

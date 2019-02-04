@@ -1,4 +1,4 @@
-package project.color_listview_test;
+package project.adapter;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -8,7 +8,8 @@ import com.greatmahanta.grmframework.R;
 
 import java.util.ArrayList;
 
-import project.adapter.ListViewAdapter;
+import project.struct.ColorStruct;
+import project.viewholder.ColorViewHolder;
 
 public class ColorListViewAdapter extends ListViewAdapter<ColorStruct> {
 

@@ -1,4 +1,4 @@
-package project.color_listview_test;
+package project.viewholder;
 
 import android.widget.LinearLayout;
 import android.widget.TextView;

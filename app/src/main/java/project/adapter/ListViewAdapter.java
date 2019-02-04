@@ -10,7 +10,7 @@ import com.greatmahanta.grmframework.R;
 
 import java.util.ArrayList;
 
-import project.color_listview_test.ColorViewHolder;
+import project.viewholder.ColorViewHolder;
 
 
 public abstract class ListViewAdapter<T> extends ArrayAdapter<T> {

@@ -16,7 +16,7 @@ import com.greatmahanta.grmframework.R;
 import java.io.File;
 
 import project.core.GRMBase;
-import project.helper.MySQLiteDatabaseHelper;
+import project.helper.SQLiteDatabaseHelper;
 import project.listener.Listeners;
 
 @SuppressLint("Registered")
@@ -102,7 +102,7 @@ public class GRMAppCompatActivity extends AppCompatActivity {
       new File(GRMBase.SDCARD + "/" + appDirectoryName).mkdirs();
     }
 
-    MySQLiteDatabaseHelper databaseHelper = new MySQLiteDatabaseHelper(this, appDirectoryName, databaseDirectoryName, databaseName);
+    SQLiteDatabaseHelper databaseHelper = new SQLiteDatabaseHelper(this, appDirectoryName, databaseDirectoryName, databaseName);
 
     if (databaseHelper != null) {
       sqliteDatabase = databaseHelper.getWritableDatabase();

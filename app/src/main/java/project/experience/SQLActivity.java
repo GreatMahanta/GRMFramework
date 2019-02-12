@@ -25,9 +25,12 @@ public class SQLActivity extends GRMAppCompatActivity {
       @Override
       public void onGrant() {
 
-        sqLiteDatabase = getSqliteDatabase("SqliteApp", "SqliteDirectory", "test2");
+        sqLiteDatabase = getSqliteDatabase("SqliteApp", "SqliteDirectory", "test");
+        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS person");
+        sqLiteDatabase.execSQL("CREATE TABLE person ('personId' INTEGER PRIMARY KEY AUTOINCREMENT, 'firstname' TEXT, 'lastName' TEXT, 'email' TEXT)");
+
         //createAppDirectory("test-test");
-        Log.i(TAG, "Ummm ");
+        Log.i(TAG, "SQL Correct ");
 
       }
     });

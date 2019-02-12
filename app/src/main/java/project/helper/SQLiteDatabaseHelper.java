@@ -22,7 +22,7 @@ public class SQLiteDatabaseHelper extends SQLiteOpenHelper {
   public void onCreate(SQLiteDatabase database) {
     try {
 
-      database.execSQL("CREATE TABLE person ('personId' INTEGER PRIMARY KEY AUTOINCREMENT, 'firstname' TEXT, 'lastName' TEXT, 'email' TEXT)");
+      database.execSQL("CREATE TABLE person ()");
 
     } catch (SQLException e) {
       Log.i(TAG, "Syntax Error !!!");
@@ -34,7 +34,5 @@ public class SQLiteDatabaseHelper extends SQLiteOpenHelper {
   @Override
   public void onUpgrade(SQLiteDatabase database, int oldVersion, int newVersion) {
 
-    database.execSQL("DROP TABLE IF EXISTS person");
-    onCreate(database);
   }
 }

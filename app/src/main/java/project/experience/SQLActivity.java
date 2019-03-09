@@ -29,10 +29,10 @@ public class SQLActivity extends GRMAppCompatActivity {
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS person");
         sqLiteDatabase.execSQL("CREATE TABLE person ('personId' INTEGER PRIMARY KEY AUTOINCREMENT, 'firstname' TEXT, 'lastName' TEXT, 'email' TEXT)");
 
-        //createAppDirectory("test-test");
-        Log.i(TAG, "SQL Correct ");
+        Log.i(TAG, "SQL Correct");
 
       }
     });
+
   }
 }

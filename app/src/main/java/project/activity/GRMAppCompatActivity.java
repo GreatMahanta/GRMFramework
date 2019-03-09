@@ -28,7 +28,6 @@ public class GRMAppCompatActivity extends AppCompatActivity {
   private String permission;
   private Listeners.OnPermissionGrantListener onPermissionGrantListener;
   private int requestCode = 100;
-  //  private String appDirectoryName;
   private SQLiteDatabase sqliteDatabase;
 
   protected void requestDangerousPermissions(final Activity activity, final String permission, Listeners.OnPermissionGrantListener onPermissionGrantListener) {
@@ -91,7 +90,6 @@ public class GRMAppCompatActivity extends AppCompatActivity {
     }
   }
 
-
   protected SQLiteDatabase getSqliteDatabase(String appDirectoryName, String databaseDirectoryName, String databaseName) {
 
     if (sqliteDatabase != null) {
@@ -111,6 +109,5 @@ public class GRMAppCompatActivity extends AppCompatActivity {
     }
     return null;
   }
-
 
 }

@@ -16,14 +16,12 @@ import project.listener.Listeners;
 public class DownloadActivity extends AppCompatActivity {
 
   private static final String TAG = "Pouya";
-
-  public static String method;
+  public String method;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_download);
-
 
     final EditText edt_url = findViewById(R.id.edt_url);
     final EditText edt_method = findViewById(R.id.edt_method);

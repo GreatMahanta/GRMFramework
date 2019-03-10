@@ -24,9 +24,6 @@ public class MainActivity extends GRMAppCompatActivity {
     Manifest.permission.ACCESS_COARSE_LOCATION,
   };
 
-//  ScrollView scrollView = new ScrollView(R.id.gone);
-//  scrollView.
-
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
